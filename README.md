@@ -2,23 +2,40 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
-## Code scaffolding
+# Installation
 
-Run `ng generate component component-name --project navigation` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project navigation`.
-> Note: Don't forget to add `--project navigation` or else it will be added to the default project in your `angular.json` file. 
+You can install the Custom Angular Navigation Library using npm:
 
-## Build
+```
+npm i @telio/navigation
+```
 
-Run `ng build navigation` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Getting Started
 
-## Publishing
+Import the NavigationModule in your AppModule:
 
-After building your library with `ng build navigation`, go to the dist folder `cd dist/navigation` and run `npm publish`.
+```
+import { NavigationModule } from '@telio/navigation';
 
-## Running unit tests
+@NgModule({
+  imports: [
+    NavigationModule
+  ]
+})
+export class AppModule { }
+```
 
-Run `ng test navigation` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Usage
 
-## Further help
+Use the navigation component in your template:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+<telio-navigation [navigation]="navigation"></telio-navigation>
+
+NavigationItem {
+  label: string;
+  route: string;
+  hidden?: boolean;
+}
+```
+
