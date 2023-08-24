@@ -1,7 +1,22 @@
 <nav>
   <ul>
-    <li *ngFor="let link of navigation">
-      <a *ngIf="!link.hidden" [routerLink]="link.route" routerLinkActive="active">{{link.label}}</a>
+    <ng-container *ngIf="!isMobile">
+      <li *ngFor="let link of navigation">
+        <a *ngIf="!link.hidden" [routerLink]="link.route" routerLinkActive="active">{{link.label}}</a>
+      </li>
+    </ng-container>
+    <li *ngIf="isMobile; else liHolder" (click)="toggleHolder()">
+      <ng-container *ngIf="isExpanded">
+        <section class="holder">
+          <ng-container *ngFor="let link of navigation">
+            <a *ngIf="!link.hidden" [routerLink]="link.route" routerLinkActive="active">{{link.label}}</a>
+          </ng-container>
+        </section>
+      </ng-container>
     </li>
   </ul>
 </nav>
+
+<ng-template #liHolder>
+  <span></span>
+</ng-template>

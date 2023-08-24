@@ -1,6 +1,49 @@
 :host {
 
   nav {
+
+    .holder {
+
+      position: absolute;
+      z-index: 9999;
+      top: 30px;
+      right: 0;
+      -webkit-box-shadow: -2px 2px 5px 0px rgba(58,59,61,0.59);
+      -moz-box-shadow: -2px 2px 5px 0px rgba(58,59,61,0.59);
+      box-shadow: -2px 2px 5px 0px rgba(58,59,61,0.59);
+
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+
+      a {
+
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        color: rgb(38, 38, 42);
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+
+        &:hover {
+          color: rgb(58, 59, 61);
+        }
+
+        &.active {
+          background-color: rgb(58, 59, 61);
+          color: rgb(255, 255, 255);
+
+          &:hover {
+            color: rgb(188, 192, 199);
+          }
+        }
+      }
+    }
+
     width: 100%;
     border-bottom: 1px solid rgb(229 231 235);
     background-color: rgb(255, 255, 255);
@@ -11,7 +54,6 @@
     justify-content: flex-end;
     align-items: flex-start;
 
-    position: sticky;
     top: 0;
 
     ul {
@@ -46,6 +88,45 @@
 
           &.active {
             border-bottom: 2px solid rgb(58, 59, 61);
+          }
+        }
+
+        &:last-child {
+          position: relative;
+
+          margin-left: auto;
+          margin-top: -40px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          padding: 10px;
+
+          cursor: pointer;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgb(38, 38, 42);
+            z-index: 1;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 14px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgb(38, 38, 42);
+            z-index: 2;
           }
         }
       }
