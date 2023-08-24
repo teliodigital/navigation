@@ -1,6 +1,6 @@
 {
   "name": "@telio/navigation",
-  "version": "0.0.2",
+  "version": "0.0.0-development",
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0"
@@ -10,7 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/teliodigital/navigation.git"
+    "url": "https://github.com/teliohub/navigation.git"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "semantic-release": "^21.1.0"
+  }
 }
