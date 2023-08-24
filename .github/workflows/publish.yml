@@ -29,6 +29,8 @@ jobs:
     - run: npm ci
 
   publish:
+    permissions:
+      contents: write
 
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/master'}}
@@ -46,4 +48,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
