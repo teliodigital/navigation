@@ -1,6 +1,6 @@
 {
   "name": "@telio/navigation",
-  "version": "1.1.4",
+  "version": "1.1.7",
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0"
@@ -14,14 +14,9 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "npx -p @angular/cli@16 ng build",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "semantic-release": "^21.1.0",
-    "@angular-devkit/build-angular": "^16.2.0"
-  },
-  "files": [
-    "dist"
-  ]
+    "semantic-release": "^21.1.0"
+  }
 }
