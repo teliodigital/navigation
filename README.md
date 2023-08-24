@@ -32,10 +32,38 @@ Use the navigation component in your template:
 ```
 <telio-navigation [navigation]="navigation"></telio-navigation>
 
+navigation: NavigationItem[] = [
+  {
+    label: 'Home',
+    route: '/home'
+  },
+  {
+    label: 'About',
+    route: '/about'
+  },
+  {
+    label: 'Contact',
+    route: '/contact'
+  }
+];
+
 NavigationItem {
   label: string;
   route: string;
   hidden?: boolean;
+}
+```
+
+# Styling
+
+The navigation component uses the following options for styling:
+
+```
+<telio-navigation [navigation]="navigation" [options]="options"></telio-navigation>
+
+options: NavigationOptions = {
+  responsiveBreakpoint: 768,
+  maxInnerWidth: 1200,
 }
 ```
 
