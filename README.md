@@ -15,7 +15,7 @@ npm i @telio/navigation
 Import the NavigationModule in your AppModule:
 
 ```
-import { NavigationModule } from '@telio/navigation/src/lib/navigation.module';
+import { NavigationModule } from '@telio/navigation';
 
 @NgModule({
   imports: [
