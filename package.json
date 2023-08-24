@@ -18,7 +18,8 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "semantic-release": "^21.1.0"
+    "semantic-release": "^21.1.0",
+    "@angular-devkit/build-angular": "^16.2.0"
   },
   "files": [
     "dist"
