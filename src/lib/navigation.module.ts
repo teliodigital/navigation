@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {NavigationComponent} from './navigation.component';
 import {CommonModule} from "@angular/common";
-import {RouterLink, RouterLinkActive} from "@angular/router";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -9,8 +9,7 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
   ],
   imports: [
     CommonModule,
-    RouterLink,
-    RouterLinkActive
+    RouterModule
   ],
   exports: [
     NavigationComponent
