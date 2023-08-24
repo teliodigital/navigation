@@ -1,4 +1,4 @@
-<nav>
+<nav [ngStyle]="optionStyles">
   <ul>
     <ng-container *ngIf="!isMobile">
       <li *ngFor="let link of navigation">

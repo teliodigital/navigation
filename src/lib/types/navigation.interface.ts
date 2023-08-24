@@ -3,3 +3,8 @@ export interface NavigationItem {
   route: string;
   hidden?: boolean;
 }
+
+export interface NavigationOptions {
+  responsiveBreakpoint?: number;
+  maxInnerWidth?: number;
+}

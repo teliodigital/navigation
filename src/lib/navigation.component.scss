@@ -1,4 +1,8 @@
 :host {
+  width: 100%;
+  border-bottom: 1px solid rgb(229 231 235);
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
 
   nav {
 
@@ -44,10 +48,7 @@
       }
     }
 
-    width: 100%;
-    border-bottom: 1px solid rgb(229 231 235);
-    background-color: rgb(255, 255, 255);
-
+    margin: auto;
     height: 3rem;
     display: flex;
     flex-direction: column;
